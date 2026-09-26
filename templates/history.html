@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>History | Email AI</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+    <div class="logo-box">
+        ✉
+    </div>
+
+    <div>
+        Email<span>AI</span>
+    </div>
+
+</div>
+
+
+<div class="nav-links">
+
+    <a href="{{ url_for('home') }}">
+        Home
+    </a>
+
+    <a href="{{ url_for('classify') }}">
+        Classify Email
+    </a>
+
+    <a href="{{ url_for('history') }}"
+       class="active">
+        History
+    </a>
+
+    <a href="{{ url_for('about') }}">
+        About
+    </a>
+
+</div>
+
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="history-hero">
+
+
+<div class="history-hero-content">
+
+    <div class="history-label">
+        ✦ PREDICTION RECORDS
+    </div>
+
+    <h1>
+        Email
+        <span>History</span>
+    </h1>
+
+    <p>
+        View your previous email classification
+        results and prediction details.
+    </p>
+
+</div>
+
+
+</section>
+
+<!-- ================= MAIN ================= -->
+
+<main class="history-container">
+
+
+{% if history %}
+
+
+<!-- HEADER CARD -->
+
+<div class="history-header-card">
+
+    <div class="history-title">
+
+        <div class="history-icon">
+            🕘
+        </div>
+
+        <div>
+
+            <div class="small-title">
+                ACTIVITY
+            </div>
+
+            <h2>
+                Prediction History
+            </h2>
+
+            <p>
+                Previously classified emails
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="history-count">
+
+        <strong>
+            {{ history|length }}
+        </strong>
+
+        <span>
+            Predictions
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- TABLE CARD -->
+
+<div class="history-table-card">
+
+    <div class="table-header">
+
+        <div>
+
+            <h3>
+                Classification Records
+            </h3>
+
+            <p>
+                Your recent email prediction activity
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        EMAIL
+                    </th>
+
+                    <th>
+                        CATEGORY
+                    </th>
+
+                    <th>
+                        PRIORITY
+                    </th>
+
+                    <th>
+                        DATE & TIME
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for item in history %}
+
+                <tr>
+
+
+                    <!-- SUBJECT -->
+
+                    <td>
+
+                        <div class="email-info">
+
+                            <div class="email-icon">
+                                ✉
+                            </div>
+
+                            <div>
+
+                                <div class="email-subject">
+                                    {{ item.subject }}
+                                </div>
+
+                                <div class="email-label">
+                                    Classified Email
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+
+                    <!-- CATEGORY -->
+
+                    <td>
+
+                        <span class="history-category">
+
+                            {% if item.category == "Work" %}
+                                💼
+                            {% elif item.category == "Finance" %}
+                                💰
+                            {% elif item.category == "Personal" %}
+                                👤
+                            {% elif item.category == "Promotion" %}
+                                🛍️
+                            {% elif item.category == "Social" %}
+                                👥
+                            {% elif item.category == "Spam" %}
+                                🚫
+                            {% elif item.category == "Support" %}
+                                🛠️
+                            {% elif item.category == "Newsletter" %}
+                                📰
+                            {% endif %}
+
+                            {{ item.category }}
+
+                        </span>
+
+                    </td>
+
+
+                    <!-- PRIORITY -->
+
+                    <td>
+
+                        <span class="history-priority {{ item.priority|lower }}">
+
+                            {% if item.priority|lower == "high" %}
+                                🔴
+                            {% elif item.priority|lower == "medium" %}
+                                🟡
+                            {% elif item.priority|lower == "low" %}
+                                🟢
+                            {% endif %}
+
+                            {{ item.priority }}
+
+                        </span>
+
+                    </td>
+
+
+                    <!-- TIME -->
+
+                    <td>
+
+                        <div class="history-time">
+
+                            <span class="time-icon">
+                                🕒
+                            </span>
+
+                            {{ item.time }}
+
+                        </div>
+
+                    </td>
+
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+{% else %}
+
+
+<!-- ================= EMPTY STATE ================= -->
+
+<div class="empty-history-card">
+
+    <div class="empty-icon">
+        📭
+    </div>
+
+
+    <h2>
+        No Prediction History
+    </h2>
+
+
+    <p>
+        You haven't classified any emails yet.
+        Start by analyzing your first email.
+    </p>
+
+
+    <a href="{{ url_for('classify') }}"
+       class="history-btn">
+
+        <span>✦</span>
+
+        Classify Your First Email
+
+    </a>
+
+</div>
+
+
+{% endif %}
+
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+<div class="footer-content">
+
+    <div class="footer-brand">
+
+        <div class="footer-logo">
+            ✉ Email<span>AI</span>
+        </div>
+
+        <p>
+            AI-powered email classification and
+            reply suggestion system.
+        </p>
+
+    </div>
+
+
+    <div class="footer-project">
+
+        <span>
+            MCA MINI PROJECT
+        </span>
+
+        <p>
+            Machine Learning • NLP • Flask
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+    © 2026 Email AI. All rights reserved.
+
+</div>
+
+
+</footer>
+
+</body>
+
+</html>

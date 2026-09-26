@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Classify Email | Email AI</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+    <div class="logo-box">
+        ✉
+    </div>
+
+    <div>
+        Email<span>AI</span>
+    </div>
+
+</div>
+
+
+<div class="nav-links">
+
+    <a href="{{ url_for('home') }}">
+        Home
+    </a>
+
+    <a href="{{ url_for('classify') }}"
+       class="active">
+        Classify Email
+    </a>
+
+    <a href="{{ url_for('history') }}">
+        History
+    </a>
+
+    <a href="{{ url_for('about') }}">
+        About
+    </a>
+
+</div>
+
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="classify-hero">
+
+
+<div class="classify-hero-content">
+
+    <div class="classify-label">
+        ✦ AI EMAIL ANALYZER
+    </div>
+
+
+    <h1>
+        Analyze Your
+        <span>Email</span>
+    </h1>
+
+
+    <p>
+        Enter an email below and let the Machine Learning
+        model identify its category and generate a helpful
+        reply suggestion.
+    </p>
+
+</div>
+
+
+</section>
+
+<!-- ================= MAIN ================= -->
+
+<main class="classify-container">
+
+
+<div class="classify-layout">
+
+
+    <!-- ================= FORM CARD ================= -->
+
+    <section class="email-form-card">
+
+
+        <div class="card-header">
+
+            <div class="card-header-icon">
+                📝
+            </div>
+
+            <div>
+
+                <div class="small-title">
+                    EMAIL INPUT
+                </div>
+
+                <h2>
+                    Enter Email Details
+                </h2>
+
+                <p>
+                    Provide the subject and message below.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <form action="{{ url_for('predict') }}"
+              method="POST"
+              class="email-form">
+
+
+            <!-- SUBJECT -->
+
+            <div class="form-group">
+
+                <label for="subject">
+
+                    <span class="label-icon">
+                        ✉
+                    </span>
+
+                    Email Subject
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Example: Project Meeting Tomorrow"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <!-- BODY -->
+
+            <div class="form-group">
+
+                <label for="body">
+
+                    <span class="label-icon">
+                        📄
+                    </span>
+
+                    Email Body
+
+                </label>
+
+
+                <textarea
+                    id="body"
+                    name="body"
+                    rows="11"
+                    placeholder="Write or paste the email message here..."
+                ></textarea>
+
+
+                <div class="textarea-footer">
+
+                    <span>
+                        💡 Include enough information for better analysis
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="analyze-btn">
+
+                <span class="button-icon">
+                    ✨
+                </span>
+
+                Analyze Email
+
+                <span class="button-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+        </form>
+
+
+    </section>
+
+
+
+    <!-- ================= SIDE INFORMATION ================= -->
+
+    <aside class="info-panel">
+
+
+        <!-- HOW IT WORKS -->
+
+        <div class="info-card">
+
+            <div class="info-card-header">
+
+                <div class="info-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <h3>
+                        How It Works
+                    </h3>
+
+                    <p>
+                        AI processing pipeline
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="mini-process">
+
+
+                <div class="mini-step">
+
+                    <div class="mini-number">
+                        1
+                    </div>
+
+                    <div>
+                        <strong>Email Input</strong>
+                        <span>Subject & body</span>
+                    </div>
+
+                </div>
+
+
+                <div class="mini-line"></div>
+
+
+                <div class="mini-step">
+
+                    <div class="mini-number">
+                        2
+                    </div>
+
+                    <div>
+                        <strong>TF-IDF</strong>
+                        <span>Text vectorization</span>
+                    </div>
+
+                </div>
+
+
+                <div class="mini-line"></div>
+
+
+                <div class="mini-step">
+
+                    <div class="mini-number">
+                        3
+                    </div>
+
+                    <div>
+                        <strong>ML Model</strong>
+                        <span>Category prediction</span>
+                    </div>
+
+                </div>
+
+
+                <div class="mini-line"></div>
+
+
+                <div class="mini-step">
+
+                    <div class="mini-number">
+                        4
+                    </div>
+
+                    <div>
+                        <strong>Reply</strong>
+                        <span>Suggested response</span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CATEGORIES -->
+
+        <div class="info-card categories-info">
+
+            <div class="info-card-header">
+
+                <div class="info-icon purple-icon">
+                    📂
+                </div>
+
+                <div>
+
+                    <h3>
+                        Supported Categories
+                    </h3>
+
+                    <p>
+                        Email classification labels
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="mini-categories">
+
+                <span>💼 Work</span>
+
+                <span>💰 Finance</span>
+
+                <span>👤 Personal</span>
+
+                <span>🛍️ Promotion</span>
+
+                <span>👥 Social</span>
+
+                <span>🚫 Spam</span>
+
+                <span>🛠️ Support</span>
+
+                <span>📰 Newsletter</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TIP -->
+
+        <div class="tip-card">
+
+            <div class="tip-icon">
+                💡
+            </div>
+
+            <div>
+
+                <strong>
+                    For better results
+                </strong>
+
+                <p>
+                    Enter a clear subject and complete
+                    email message before analyzing.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+</div>
+
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+<div class="footer-content">
+
+    <div class="footer-brand">
+
+        <div class="footer-logo">
+            ✉ Email<span>AI</span>
+        </div>
+
+        <p>
+            AI-powered email classification and
+            reply suggestion system.
+        </p>
+
+    </div>
+
+
+    <div class="footer-project">
+
+        <span>
+            MCA MINI PROJECT
+        </span>
+
+        <p>
+            Machine Learning • NLP • Flask
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+    © 2026 Email AI. All rights reserved.
+
+</div>
+
+
+</footer>
+
+</body>
+
+</html>

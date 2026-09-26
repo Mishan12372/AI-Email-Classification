@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Home | Email AI</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+    <div class="logo-box">
+        ✉
+    </div>
+
+    <div>
+        Email<span>AI</span>
+    </div>
+
+</div>
+
+
+<div class="nav-links">
+
+    <a href="{{ url_for('home') }}"
+       class="active">
+        Home
+    </a>
+
+    <a href="{{ url_for('classify') }}">
+        Classify Email
+    </a>
+
+    <a href="{{ url_for('history') }}">
+        History
+    </a>
+
+    <a href="{{ url_for('about') }}">
+        About
+    </a>
+
+</div>
+
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="home-hero">
+
+
+<div class="hero-glow glow-one"></div>
+
+<div class="hero-glow glow-two"></div>
+
+
+<div class="home-hero-content">
+
+
+    <div class="hero-badge">
+        ✦ MACHINE LEARNING • NLP • FLASK
+    </div>
+
+
+    <div class="hero-icon-large">
+        ✉
+    </div>
+
+
+    <h1>
+
+        Smarter Email.
+
+        <span>
+            Better Responses.
+        </span>
+
+    </h1>
+
+
+    <p>
+
+        An intelligent email classification system that
+        analyzes your messages, identifies their category,
+        and provides a useful reply suggestion using
+        Machine Learning and Natural Language Processing.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+        <a href="{{ url_for('classify') }}"
+           class="primary-hero-btn">
+
+            <span>✨</span>
+
+            Analyze an Email
+
+            <span>→</span>
+
+        </a>
+
+
+        <a href="{{ url_for('about') }}"
+           class="secondary-hero-btn">
+
+            Learn More
+
+        </a>
+
+    </div>
+
+
+    <div class="hero-trust">
+
+        <span>✓</span>
+        TF-IDF Vectorization
+
+        <span>✓</span>
+        Machine Learning
+
+        <span>✓</span>
+        Automated Reply
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats-section">
+
+
+<div class="stats-container">
+
+
+    <div class="stat-item">
+
+        <div class="stat-icon">
+            📂
+        </div>
+
+        <div>
+
+            <strong>
+                8
+            </strong>
+
+            <span>
+                Email Categories
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat-item">
+
+        <div class="stat-icon">
+            🤖
+        </div>
+
+        <div>
+
+            <strong>
+                ML
+            </strong>
+
+            <span>
+                Powered Prediction
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat-item">
+
+        <div class="stat-icon">
+            ⚡
+        </div>
+
+        <div>
+
+            <strong>
+                Fast
+            </strong>
+
+            <span>
+                Email Analysis
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat-item">
+
+        <div class="stat-icon">
+            💬
+        </div>
+
+        <div>
+
+            <strong>
+                AI
+            </strong>
+
+            <span>
+                Reply Suggestions
+            </span>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="home-features">
+
+
+<div class="section-heading">
+
+    <div class="section-label">
+        ✦ SYSTEM CAPABILITIES
+    </div>
+
+    <h2>
+        Intelligent Email
+        <span>Analysis</span>
+    </h2>
+
+    <p>
+        Designed to make email processing simpler,
+        faster and more organized.
+    </p>
+
+</div>
+
+
+
+<div class="home-feature-grid">
+
+
+    <!-- CARD 1 -->
+
+    <div class="home-feature-card">
+
+        <div class="feature-number">
+            01
+        </div>
+
+        <div class="home-feature-icon blue">
+            🤖
+        </div>
+
+        <h3>
+            AI Classification
+        </h3>
+
+        <p>
+            Automatically analyzes email text and
+            predicts the most suitable email category
+            using a trained Machine Learning model.
+        </p>
+
+        <div class="feature-link">
+            Smart Classification →
+        </div>
+
+    </div>
+
+
+
+    <!-- CARD 2 -->
+
+    <div class="home-feature-card">
+
+        <div class="feature-number">
+            02
+        </div>
+
+        <div class="home-feature-icon purple">
+            ⚡
+        </div>
+
+        <h3>
+            Fast Prediction
+        </h3>
+
+        <p>
+            Convert email content into numerical
+            features using TF-IDF and obtain the
+            prediction within seconds.
+        </p>
+
+        <div class="feature-link">
+            Quick Analysis →
+        </div>
+
+    </div>
+
+
+
+    <!-- CARD 3 -->
+
+    <div class="home-feature-card">
+
+        <div class="feature-number">
+            03
+        </div>
+
+        <div class="home-feature-icon green">
+            💬
+        </div>
+
+        <h3>
+            Reply Suggestion
+        </h3>
+
+        <p>
+            Provides a suitable predefined reply
+            suggestion based on the predicted
+            email category.
+        </p>
+
+        <div class="feature-link">
+            Helpful Responses →
+        </div>
+
+    </div>
+
+
+
+    <!-- CARD 4 -->
+
+    <div class="home-feature-card">
+
+        <div class="feature-number">
+            04
+        </div>
+
+        <div class="home-feature-icon orange">
+            🚨
+        </div>
+
+        <h3>
+            Priority Detection
+        </h3>
+
+        <p>
+            Displays the email priority as High,
+            Medium or Low according to the current
+            project implementation.
+        </p>
+
+        <div class="feature-link">
+            Priority Analysis →
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="home-process">
+
+
+<div class="section-heading">
+
+    <div class="section-label">
+        ✦ SIMPLE WORKFLOW
+    </div>
+
+    <h2>
+        How EmailAI
+        <span>Works</span>
+    </h2>
+
+    <p>
+        From email input to intelligent prediction
+        in four simple steps.
+    </p>
+
+</div>
+
+
+
+<div class="process-container">
+
+
+    <!-- STEP 1 -->
+
+    <div class="process-step">
+
+        <div class="process-circle">
+            01
+        </div>
+
+        <div class="process-line"></div>
+
+        <h3>
+            Enter Email
+        </h3>
+
+        <p>
+            Enter the subject and body of the
+            email you want to analyze.
+        </p>
+
+    </div>
+
+
+
+    <!-- STEP 2 -->
+
+    <div class="process-step">
+
+        <div class="process-circle">
+            02
+        </div>
+
+        <div class="process-line"></div>
+
+        <h3>
+            Text Processing
+        </h3>
+
+        <p>
+            The email text is processed and converted
+            into numerical features using TF-IDF.
+        </p>
+
+    </div>
+
+
+
+    <!-- STEP 3 -->
+
+    <div class="process-step">
+
+        <div class="process-circle">
+            03
+        </div>
+
+        <div class="process-line"></div>
+
+        <h3>
+            ML Prediction
+        </h3>
+
+        <p>
+            The trained Machine Learning model analyzes
+            the extracted text features.
+        </p>
+
+    </div>
+
+
+
+    <!-- STEP 4 -->
+
+    <div class="process-step">
+
+        <div class="process-circle">
+            04
+        </div>
+
+        <h3>
+            View Result
+        </h3>
+
+        <p>
+            View the predicted category, priority
+            and suggested reply.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="category-section">
+
+
+<div class="category-content">
+
+
+    <div class="category-text">
+
+        <div class="section-label">
+            ✦ EMAIL ORGANIZATION
+        </div>
+
+        <h2>
+            One System.
+            <span>Multiple Categories.</span>
+        </h2>
+
+        <p>
+            EmailAI can classify messages into different
+            categories based on the content of the email.
+            This helps organize messages and makes
+            email processing easier.
+        </p>
+
+
+        <a href="{{ url_for('classify') }}"
+           class="category-btn">
+
+            Start Classification →
+
+        </a>
+
+    </div>
+
+
+
+    <div class="category-grid">
+
+        <span>💼 Work</span>
+
+        <span>💰 Finance</span>
+
+        <span>👤 Personal</span>
+
+        <span>🛍️ Promotion</span>
+
+        <span>👥 Social</span>
+
+        <span>🚫 Spam</span>
+
+        <span>🛠️ Support</span>
+
+        <span>📰 Newsletter</span>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="home-cta">
+
+```
+<div class="cta-content">
+
+    <div class="cta-icon">
+        ✨
+    </div>
+
+    <h2>
+        Ready to Analyze an Email?
+    </h2>
+
+    <p>
+        Enter your email and let the Machine Learning
+        system do the analysis.
+    </p>
+
+    <a href="{{ url_for('classify') }}"
+       class="cta-button">
+
+        Analyze Email
+
+        <span>→</span>
+
+    </a>
+
+</div>
+
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+<div class="footer-content">
+
+    <div class="footer-brand">
+
+        <div class="footer-logo">
+            ✉ Email<span>AI</span>
+        </div>
+
+        <p>
+            AI-powered email classification and
+            reply suggestion system.
+        </p>
+
+    </div>
+
+
+    <div class="footer-project">
+
+        <span>
+            MCA MINI PROJECT
+        </span>
+
+        <p>
+            Machine Learning • NLP • Flask
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+    © 2026 Email AI. All rights reserved.
+
+</div>
+
+
+</footer>
+
+</body>
+
+</html>

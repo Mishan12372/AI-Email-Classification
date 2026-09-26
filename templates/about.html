@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>About | Email AI</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+    <div class="logo-box">
+        ✉
+    </div>
+
+    <div>
+        Email<span>AI</span>
+    </div>
+
+</div>
+
+
+<div class="nav-links">
+
+    <a href="{{ url_for('home') }}">
+        Home
+    </a>
+
+    <a href="{{ url_for('classify') }}">
+        Classify Email
+    </a>
+
+    <a href="{{ url_for('history') }}">
+        History
+    </a>
+
+    <a href="{{ url_for('about') }}" class="active">
+        About
+    </a>
+
+</div>
+
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="about-hero">
+
+<div class="hero-content">
+
+    <div class="hero-label">
+        <span>✦</span>
+        MACHINE LEARNING PROJECT
+    </div>
+
+
+    <h1>
+        Intelligent Email
+        <br>
+        <span>Classification & Reply</span>
+    </h1>
+
+
+    <p>
+        An AI-powered web application that analyzes email content,
+        predicts its category, and provides an intelligent
+        reply suggestion using Machine Learning and NLP.
+    </p>
+
+
+    <div class="hero-stats">
+
+        <div class="stat">
+            <strong>8</strong>
+            <span>Email Categories</span>
+        </div>
+
+
+        <div class="stat-divider"></div>
+
+
+        <div class="stat">
+            <strong>TF-IDF</strong>
+            <span>Text Processing</span>
+        </div>
+
+
+        <div class="stat-divider"></div>
+
+
+        <div class="stat">
+            <strong>ML</strong>
+            <span>Classification</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- ================= MAIN ================= -->
+
+<main class="main-container">
+
+<!-- INTRODUCTION -->
+
+<section class="intro-card">
+
+    <div class="intro-icon">
+        🤖
+    </div>
+
+
+    <div class="intro-content">
+
+        <div class="small-title">
+            ABOUT THE PROJECT
+        </div>
+
+
+        <h2>
+            Making Email Management Smarter
+        </h2>
+
+
+        <p>
+            <strong>
+                AI Email Classification and Reply Suggestion
+                Using Machine Learning
+            </strong>
+            is a Machine Learning based application designed
+            to automatically analyze and classify email messages.
+        </p>
+
+
+        <p>
+            The system takes the email subject and body as input,
+            processes the text using Natural Language Processing,
+            and predicts the most suitable email category.
+            It also provides a suggested reply to help users
+            respond more efficiently.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- OBJECTIVE -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div class="section-number">
+            01
+        </div>
+
+        <div>
+            <div class="small-title">
+                PURPOSE
+            </div>
+
+            <h2>
+                Project Objective
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon purple">
+                📩
+            </div>
+
+            <h3>
+                Analyze Emails
+            </h3>
+
+            <p>
+                Analyze the subject and body of an email
+                to understand its textual content.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon blue">
+                🧠
+            </div>
+
+            <h3>
+                Classify Automatically
+            </h3>
+
+            <p>
+                Use a trained Machine Learning model to
+                predict the appropriate email category.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon green">
+                💬
+            </div>
+
+            <h3>
+                Suggest a Reply
+            </h3>
+
+            <p>
+                Provide a suitable reply suggestion
+                based on the classified email.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- TECHNOLOGIES -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div class="section-number">
+            02
+        </div>
+
+        <div>
+
+            <div class="small-title">
+                TECHNOLOGY STACK
+            </div>
+
+            <h2>
+                Technologies Used
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="tech-grid">
+
+
+        <div class="tech-card">
+
+            <div class="tech-icon">
+                🐍
+            </div>
+
+            <div>
+                <h3>Python</h3>
+                <p>Programming Language</p>
+            </div>
+
+        </div>
+
+
+        <div class="tech-card">
+
+            <div class="tech-icon">
+                🌐
+            </div>
+
+            <div>
+                <h3>Flask</h3>
+                <p>Web Application Framework</p>
+            </div>
+
+        </div>
+
+
+        <div class="tech-card">
+
+            <div class="tech-icon">
+                🤖
+            </div>
+
+            <div>
+                <h3>Scikit-learn</h3>
+                <p>Machine Learning Library</p>
+            </div>
+
+        </div>
+
+
+        <div class="tech-card">
+
+            <div class="tech-icon">
+                🔤
+            </div>
+
+            <div>
+                <h3>TF-IDF</h3>
+                <p>Text Feature Extraction</p>
+            </div>
+
+        </div>
+
+
+        <div class="tech-card">
+
+            <div class="tech-icon">
+                📝
+            </div>
+
+            <div>
+                <h3>NLP</h3>
+                <p>Natural Language Processing</p>
+            </div>
+
+        </div>
+
+
+        <div class="tech-card">
+
+            <div class="tech-icon">
+                🎨
+            </div>
+
+            <div>
+                <h3>HTML & CSS</h3>
+                <p>Frontend Development</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- MACHINE LEARNING PROCESS -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div class="section-number">
+            03
+        </div>
+
+        <div>
+
+            <div class="small-title">
+                WORKFLOW
+            </div>
+
+            <h2>
+                How the System Works
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="workflow">
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">
+                01
+            </div>
+
+            <div>
+
+                <h3>
+                    Email Input
+                </h3>
+
+                <p>
+                    User enters the email subject and body.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="workflow-arrow">
+            ↓
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">
+                02
+            </div>
+
+            <div>
+
+                <h3>
+                    Text Processing
+                </h3>
+
+                <p>
+                    Subject and body are combined into
+                    a single text input.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="workflow-arrow">
+            ↓
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">
+                03
+            </div>
+
+            <div>
+
+                <h3>
+                    TF-IDF Vectorization
+                </h3>
+
+                <p>
+                    Text is converted into numerical
+                    features using TF-IDF.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="workflow-arrow">
+            ↓
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">
+                04
+            </div>
+
+            <div>
+
+                <h3>
+                    ML Prediction
+                </h3>
+
+                <p>
+                    The trained model predicts the
+                    email category.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="workflow-arrow">
+            ↓
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">
+                05
+            </div>
+
+            <div>
+
+                <h3>
+                    Reply Suggestion
+                </h3>
+
+                <p>
+                    A suitable reply suggestion is
+                    displayed to the user.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CATEGORIES -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div class="section-number">
+            04
+        </div>
+
+        <div>
+
+            <div class="small-title">
+                CLASSIFICATION
+            </div>
+
+            <h2>
+                Email Categories
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="categories">
+
+
+        <div class="category-card">
+            <span>💼</span>
+            Work
+        </div>
+
+
+        <div class="category-card">
+            <span>💰</span>
+            Finance
+        </div>
+
+
+        <div class="category-card">
+            <span>👤</span>
+            Personal
+        </div>
+
+
+        <div class="category-card">
+            <span>🛍️</span>
+            Promotion
+        </div>
+
+
+        <div class="category-card">
+            <span>👥</span>
+            Social
+        </div>
+
+
+        <div class="category-card">
+            <span>🚫</span>
+            Spam
+        </div>
+
+
+        <div class="category-card">
+            <span>🛠️</span>
+            Support
+        </div>
+
+
+        <div class="category-card">
+            <span>📰</span>
+            Newsletter
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- OUTPUT -->
+
+<section class="result-banner">
+
+    <div class="result-icon">
+        ✨
+    </div>
+
+
+    <div>
+
+        <div class="small-title">
+            FINAL OUTPUT
+        </div>
+
+        <h2>
+            Simple Input. Intelligent Result.
+        </h2>
+
+        <p>
+            After processing the email, the system displays
+            the predicted category, prediction confidence,
+            and a suggested reply.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+<div class="footer-content">
+
+    <div class="footer-brand">
+
+        <div class="footer-logo">
+            ✉ Email<span>AI</span>
+        </div>
+
+        <p>
+            AI-powered email classification and
+            reply suggestion system.
+        </p>
+
+    </div>
+
+
+    <div class="footer-project">
+
+        <span>
+            MCA MINI PROJECT
+        </span>
+
+        <p>
+            Machine Learning • NLP • Flask
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+    © 2026 Email AI. All rights reserved.
+
+</div>
+
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+Model,Accuracy,Precision,Recall,F1_Score
+Decision Tree,68.96,78.5,68.96,67.23
+Random Forest,89.33,94.23,89.33,90.2
+KNN,100.0,100.0,100.0,100.0
